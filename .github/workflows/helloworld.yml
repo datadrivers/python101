@@ -1,0 +1,16 @@
+# This workflow will say hello to the world! :-)
+
+name: Python application
+
+on:
+  push:
+    branches: [ github_action_demo ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: say_hello
+      run: python helloworld.py
