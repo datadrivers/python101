@@ -7,15 +7,10 @@ on:
     branches: [ github_action_demo ]
 
 jobs:
-  demo:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.8
     - name: say_hello
-      run: |
-        python helloworld.py
+      run: python helloworld.py
