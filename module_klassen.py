@@ -1,8 +1,24 @@
+"""
+
+Things covered:
+    * Module
+    * Funktionen
+    * Klassen
+
+Concepts:
+    * alles ist ein dict!
+
+Resources:
+    * modules: https://docs.python.org/3/tutorial/modules.html
+    * specialised: https://docs.python.org/3/library/datatypes.html
+"""
+
+
 # Module (alles, was ein .py file ist, heißt "modul") sind dictionaries! Alles was
 # Module also effektiv tun, ist "namespaces" zu schaffen, so dass wir bessere Codestruktur erhalten
 # beispiel: Variable a existert in my_module1 und in my_module2 => Wir können a als Namen mehrfach
 # verwenden und über my_module1.a resp. my_module2.a  darauf zugreifen
-from workshop2_pythonbasics import main
+import main
 
 main.__dict__
 # insbesondere wird hier deutlich, das ALLES, was im Rahmen eines moduls verwendet werden kann
@@ -16,9 +32,10 @@ class MyClass:
 A = MyClass()  # instanziieren einer klasse.. A heißt "Instanz" bzw. instance
 A.__dict__
 
+A
 class MyClass:
 
-    name = "paul" # klassenattribut
+    name = "paul"  # klassenattribut
 
 A = MyClass()
 A.__getattribute__("name")  # kompliziert..
@@ -32,6 +49,7 @@ class MyClass:
                     # self ist eine Referenz auf die Instanz der klasse, auf der foo ausgeführt wird
                     # dabei ist der name self eine konvention - die zuweisung erfolgt über die parameter
                     # position (nämlich den erstgenannten)
+        self.name = "dan"
         return "bar"
 
 A = MyClass()

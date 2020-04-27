@@ -17,7 +17,7 @@ Resources:
 
 # Grundsätzlich gilt: Alles in Python ist ein Objekt
 # einige wichtige datentypen
-a = 1
+a = 0
 type(a)
 a == True
 
@@ -49,6 +49,13 @@ b = 42
 a == b
 a is b
 
+a = 1337
+b = 1337
+b is a
+
+a = b
+b is a
+
 # ebenso: != und is not
 a != b
 a is not b
@@ -77,9 +84,12 @@ bar = None
 foo is bar
 
 
-# weitere vergleiche
 
+# weitere vergleiche
 a > b
 b >= a
 b <= a
 a != b
+
+
+# warum brauche ich überhaupt "is" ?
